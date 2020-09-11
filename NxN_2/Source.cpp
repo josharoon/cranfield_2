@@ -14,32 +14,32 @@ int main()
 
 	cout << "\n input vector size (n*n)";
 	cin >> n;
-	vector<vector<double>> vec(n);
-	
+	vector<vector<double>> vec(n, vector<double>(n));
+
 	cout << "\n input vector \n";
-	for(int row = 0; row < n; row++)
-	{
-		cout << " input row " << row << " : " << row;
-		for (int col = 0; col << n; col++)
-		{
-			cout << "col " << col << " : ";
-			cin >> vec[row][col];
-		}
-		
-
-	}
-
-	cout << "\n input vector = \n";
 	for (int row = 0; row < n; row++)
 	{
-		cout << "\n ";
-		cout << " input row " << row << " : " << row;
-		for (int col = 0; col << n; col++)
+		
+
+		for (int col = 0; col < n; col++)
 		{
-			cout << "col " << col << " : ";
+			cout << " input row " << row << " : " << row << " col " << col << " : ";
 			cin >> vec[row][col];
+
 		}
+		
+		
+		
 
 
 	}
+
+	for (int row = 0; row < n; row++)
+	{
+		cout << "\n";
+		for (int col = 0; col < n; col++)
+			cout << vec[row][col] << " ";
+	}
+
 	
+}
